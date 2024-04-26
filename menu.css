@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(92, 49, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.instruction {
+    background-color: rgb(63, 34, 8);
+    border-radius: 8px;
+    padding: 30px 30px 30px 50px;
+    color: white;
+    align-self: stretch;
+    flex: 1;
+    display: none;
+}
+.active {
+    display: block;
+}
+.instruction ol li {
+    line-height: 30px;
+}
+.instruction header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 80px;
+}
+.instruction header img {
+    width: 30px;
+    cursor: pointer;
+}
+.main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu img#logo {
+    margin-bottom: 40px;
+}
+
+.main-menu p.alert {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.main-menu input, .main-menu select {
+    border: 3px solid rgb(148, 83, 18);
+    border-radius: 5px;
+    padding: 10px 8px;
+    background-color: rgb(63, 34, 8);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.main-menu input:focus, .main-menu select:focus {
+    outline: none;
+}
+
+.main-menu select {
+    appearance: none;
+}
+
+.main-menu input::placeholder {
+    color: white;
+}
+
+.main-menu .btns {
+    display: flex;
+    gap: 8px;
+}
+
+.main-menu .btns > * {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    padding:8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-menu .btns #play {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    background-color: rgb(47, 155, 25);
+    color:white;
+}
+
+.main-menu .btns #play img {
+    width: 25px;
+}
+
+.main-menu .btns #instruction {
+    background-color: yellow;
+    color: rgb(92, 49, 11);
+}
+

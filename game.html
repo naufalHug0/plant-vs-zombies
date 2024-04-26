@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants vs Zombies!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-countdown"></div>
+    <div class="pause">
+        <h3>GAME PAUSED</h3>
+        <button>RESUME GAME</button>
+    </div>
+    <div class="container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; position: relative; width: 1000px;height: 600px;">
+        <canvas style="margin-right: 230px;"></canvas>
+        <div id="sun">50</div>
+        <div class="stats">
+            <p id="stats-player-name"></p>
+            <p id="stats-score">Score : <span></span></p>
+            <p id="stats-time">Time : <span></span></p>
+        </div>
+        <div class="leaderboard">
+            <h2>LEADERBOARD</h2>
+            <select name="" id="">
+                <option value="" disabled selected>Sort by</option>
+                <option value="score">Sort by Score</option>
+                <option value="name">Sort by Name</option>
+            </select>
+            <div class="score-list">
+                <span>
+                    <h4>Thomas Galih</h4>
+                    <p>Score : <b>44</b></p>
+                </span>
+                <div>
+                    Detail
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="Class.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

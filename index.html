@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants vs Zombies!</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <audio loop autoplay hidden >
+        <source src="./sounds/Menu.mp3" >
+    </audio>
+    <div class="container">
+        <div class="main-menu">
+            <img src="./assets/Sprites/General/logo.png" alt="" id="logo">
+            <p class="alert alert-username">Fill username</p>
+            <input type="text" placeholder="Input Username">
+            <p class="alert alert-level">Please Select Level</p>
+            <select name="" id="">
+                <option value="" disabled selected>Select Level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <div class="btns">
+                <button id="play">
+                    <img src="./assets/Sprites/General/Shovel.png" alt="">
+                    Play Game
+                </button>
+                <button id="instruction">Instruction</button>
+            </div>
+        </div>
+        <div class="instruction">
+            <header>
+                <h1>How to play game</h1>
+                <img src="./assets/Sprites/General/close-icon.png" alt="">
+            </header>
+            <ol>
+                <li>Input Username</li>
+                <li>Take the sun to choose the plant card</li>
+                <li>Put a plant cards into the field to fight zombies</li>
+                <li>Don't let zombies pass through the yard</li>
+                <li>Enjoy!</li>
+            </ol>
+        </div>
+    </div>
+<script>
+const instruction = document.querySelector('.instruction')
+
+document.querySelector('.main-menu .btns #instruction').addEventListener('click',() => {
+    instruction.classList.toggle('active')
+})
+
+document.querySelector('.instruction header img').addEventListener('click',() => {
+    document.querySelector('.instruction').classList.remove('active')
+})
+
+document.querySelector('.main-menu .btns #play').addEventListener('click', () => {
+    const hasInputUsername = document.querySelector('.main-menu input').value.length > 0
+    const hasSelectLevel = document.querySelector('.main-menu select').value.length > 0
+
+    document.querySelector('.main-menu p.alert-username').style.display = !hasInputUsername?'inline-block':'none'
+    document.querySelector('.main-menu p.alert-level').style.display = !hasSelectLevel?'inline-block':'none'
+
+    if (hasInputUsername && hasSelectLevel) {
+        sessionStorage.setItem('username',document.querySelector('.main-menu input').value)
+        sessionStorage.setItem('level',document.querySelector('.main-menu select').value)
+
+        window.location.href = 'game.html'
+    }
+})
+</script>
+</body>
+</html>

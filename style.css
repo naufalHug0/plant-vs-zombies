@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(92, 49, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.leaderboard {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 230px;
+    background-color: rgb(52, 27, 6);
+    padding: 40px 25px;
+    color: white;
+}
+
+.leaderboard select {
+    width: 100%;
+    margin: 20px 0;
+    padding: 8px ;
+    font-weight: bold;
+    appearance: none;
+}
+
+.score-list {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score-list div {
+    padding: 7px;
+    color: rgb(92, 49, 11);
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.score-list p {
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+#sun {
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+    top: 72px;
+    left: 112px;
+    text-align: center;
+    width: 60px;
+}
+.stats {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    line-height: 22px;
+    top: 16px;
+    left: 430px;
+}
+#start-countdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 500px;
+    color: white;
+    z-index: 99;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;user-select: none;
+}
+
+.pause {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 30px 50px;
+    margin: auto;
+    border-radius: 8px;
+    width: max-content;
+    height: max-content;
+    background-color: #595c9d;
+    z-index: 89;
+    box-shadow: 0px 0px 30px 0 #2d2e50;
+    text-align: center;
+    display: none;
+}
+
+.pause h3 {
+    margin-bottom: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 60px;
+    color: #e9cd68;
+    font-weight: bold;user-select: none;
+}
+
+.pause button {
+    font-family: 'Shadows Into Light', cursive;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4px;
+    color: #0ebf16;
+    background-color: #51548e;
+    box-shadow: inset 1px 1px 4px #2d2e50;
+    border: none;
+}
+
+.plant-disabled {
+    filter: grayscale(100%);
+}
